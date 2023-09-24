@@ -1,5 +1,9 @@
 # Cocktail Helper
 
+You can search for a cocktail to get the ingredients and the steps to make it.
+You can search by ingredient, the first letter of the name, you can get a random cocktail
+You can even choose from alcoholic or non-alcoholic drinks
+
 Use this repository to create new Sinatra apps. 
 
 Optionally, to use `ActiveRecord` for database operations, add to the `app.rb`:
