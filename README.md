@@ -1,4 +1,4 @@
-# sinatra-template
+# Cocktail Helper
 
 Use this repository to create new Sinatra apps. 
 
