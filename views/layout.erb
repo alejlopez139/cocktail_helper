@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sinatra Template</title>
+    <title>Cocktail Helper</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body>
+    <table style="width: 100%">
+      <tr>
+        <td>
+          <a href="/name">Search by Name</a>
+        </td>
+
+        <td>
+          <a href="/first_letter">On the Tip of my Tongue</a>
+        </td>
+
+        <td>
+          <a href="/ingredient">Search by Ingredient</a>
+        </td>
+
+        <td>
+          <a href="/contains">Contains Alcohol?</a>
+        </td>
+
+        <td>
+          <a href="/random">Random</a>
+        </td>
+      </tr>
+    </table>
     <%= yield %>
   </body>
 </html>
