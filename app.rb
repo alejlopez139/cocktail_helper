@@ -1,8 +1,7 @@
 require "sinatra"
 require "sinatra/reloader"
-require "net/http"
+require "http"
 require "json"
-
 
 get("/") do
   "
@@ -13,6 +12,14 @@ get("/") do
 end
 
 get("/ingredient") do
-  "<p>it works</p>"
   erb(:ingredient)
+end
+
+get("/ingredient_result")do
+@ingredient = params.fetch("ingredient").to_s
+url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=#{@ingredient}"
+conversion_data = JSON.parse(HTTP.get(url))
+@drinks = conversion_data['drinks']
+##need to output the key value of "strDrink"
+  erb(:ingredient_result)
 end
