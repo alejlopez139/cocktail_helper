@@ -9,3 +9,5 @@
   <% index_of_ingredient = @ingredients.find_index(name) %>
   <%= @measure.at(index_of_ingredient) %></p>
 <% end %>
+
+<%= @drinks.first.fetch("strInstructions")%>

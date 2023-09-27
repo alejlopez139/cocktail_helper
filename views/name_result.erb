@@ -1,2 +1,12 @@
 <h1>Here's your Drink</h1>
 
+<h2><%= @drinks.first.fetch("strDrink") %></h2>
+<img src="<%=@image%>" alt="thumbnail of the drink">
+
+<% @ingredients.each do |name| %>
+  <p><b><%= name %></b> - 
+  <% index_of_ingredient = @ingredients.find_index(name) %>
+  <%= @measure.at(index_of_ingredient) %></p>
+<% end %>
+
+<%= @drinks.first.fetch("strInstructions")%>
