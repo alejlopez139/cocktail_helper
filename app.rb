@@ -70,7 +70,7 @@ get("/name_result") do
   @drink_name = params.fetch("name").to_s
   url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=#{@drink_name}"
   @conversion_data = JSON.parse(HTTP.get(url))
-  @drinks = @conversion_data['drinks']
+  @drinks = @conversion_data['drinks'] 
   @image = @drinks.first.fetch("strDrinkThumb").to_s
   @image = @image + "/preview"
   @ingredients = []
