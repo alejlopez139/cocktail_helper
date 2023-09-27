@@ -2,4 +2,7 @@
 
 <% @drinks.each do |name| %>
   <p><%= name.fetch("strDrink") %></p>
+  <% image = name.fetch("strDrinkThumb").to_s %>
+  <% image = image + "/preview" %>
+  <img src="<%=image%>" alt="thumbnail of the drink">
 <% end %>
