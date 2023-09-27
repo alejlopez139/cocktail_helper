@@ -1,0 +1,5 @@
+<h1>Tip of My Tongue - Results </h1>
+
+<% @drinks.each do |name| %>
+  <p><%= name.fetch("strDrink") %></p>
+<% end %>

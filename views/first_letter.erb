@@ -1,9 +1,9 @@
 <h1>Tip of My Tongue</h1>
-<form action="/ingredient_result">
+<form action="/first_letter_result">
   <label for="form_first_letter">
-    Enter the first letter of the drink you're thinking of:
+    Enter the first letter of the drink you're thinking of (This text box will only accept the alphabet, no numbers!):
   </label>
-  <input id="form_first_letter" name="letter" text="text" maxlength="1">
+  <input id="form_first_letter" name="letter" text="text" pattern="[A-Za-z]" maxlength="1">
   <button>
     Search for cocktails!
   </button>

@@ -16,10 +16,10 @@ get("/ingredient") do
 end
 
 get("/ingredient_result")do
-@ingredient = params.fetch("ingredient").to_s
-url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=#{@ingredient}"
-@conversion_data = JSON.parse(HTTP.get(url))
-@drinks = @conversion_data['drinks']
+  @ingredient = params.fetch("ingredient").to_s
+  url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=#{@ingredient}"
+  @conversion_data = JSON.parse(HTTP.get(url))
+  @drinks = @conversion_data['drinks']
 
   erb(:ingredient_result)
 end
@@ -27,4 +27,18 @@ end
 get("/first_letter")do
 
   erb(:first_letter)
+end
+
+get("/first_letter_result")do
+  @letter = params.fetch("letter").to_s
+  url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=#{@letter}"
+  @conversion_data = JSON.parse(HTTP.get(url))
+  @drinks = @conversion_data['drinks']
+
+  erb(:first_letter_result)
+end
+
+get("/random")do
+
+  erb(:random)
 end
