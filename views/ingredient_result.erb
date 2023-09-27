@@ -1,3 +1,6 @@
 <h1>Search by Ingredients - Results</h1>
 <h2>Drinks that contain <%= @ingredient %>:</h2>
-<p><%= @drinks.each do |key, value| %></p>
+
+<% @drinks.each do |name| %>
+  <p><%= name.fetch("strDrink") %></p>
+<% end %>
